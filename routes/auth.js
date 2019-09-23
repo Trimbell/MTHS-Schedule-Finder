@@ -3,7 +3,7 @@ const passport = require('passport');
 
 // auth login
 router.get('/login', (req, res) => {
-    res.render('login', {user: req.user});
+    res.render('pages/login', {user: req.user});
 });
 
 // auth logout
@@ -15,7 +15,7 @@ router.get('/logout', (req, res) => {
 
 // auth with google
 router.get('/google', passport.authenticate('google', {
-    scope: ['progfile', 'email']
+    scope: ['profile', 'email']
 }));
 
 // callback route for google to redirect to

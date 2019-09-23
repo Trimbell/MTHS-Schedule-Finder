@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <% include ../partials/head %>
+        <title>Profile</title>
+</head>
+<body>
+    <nav>
+        <% include ../partials/nav %>
+    </nav>
+    <header>
+        <h1>Profile Page</h1>
+    </header>
+    <main>
+        <p>Name: <%= user.fullName %></p>
+        <p>Email: <%= user.email %></p>
+    </main>
+    <% include ../partials/scripts %>
+</body>
+</html>
