@@ -17,7 +17,7 @@ passport.deserializeUser((id, done) => {
 passport.use(
     new GoogleStrategy({
         // options for the google strategy
-        callbackURL: '/auth/google/redirect',
+        callbackURL: '/auth/login/callback',
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret
     }, (accessToken, refreshToken, profile, done) => {
@@ -44,6 +44,7 @@ passport.use(
             }
             else {
                 console.log('not in ESD domain');
+                
             }
         });
     })
